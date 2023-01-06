@@ -1,0 +1,9 @@
+from django.test import TestCase
+from .views import user_client
+
+# Create your tests here.
+class TestClients(TestCase):
+    def test_user_client(self):
+        name = "rogelio ortiz"
+        expected = f"Client {name} number 1"
+        self.assertEqual(user_client(name), expected)
